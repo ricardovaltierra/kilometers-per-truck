@@ -10,8 +10,8 @@ class UsersController < ApplicationController
       flash[:success] = '#{@user.name}, you are registered.'
       redirect_to @user
     else
-      flash.now[:warning] = 'Something wrong happened.'
-      render 'users/new'
+      render new_user_path
+    end
   end
 
   def show

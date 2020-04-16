@@ -7,8 +7,9 @@ class SessionsController < ApplicationController
       log_in(@user)
       redirect_to user_path(@user)
     else
-      flash.now[warning] =  'User not found'
+      flash.now[:warning] =  'You are not registered. Please do it'
       render "sessions/new"
+    end
   end
 
   def destroy
