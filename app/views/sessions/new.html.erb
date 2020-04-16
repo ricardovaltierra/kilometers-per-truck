@@ -1,10 +1,8 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<%= link_to "<-", root_path %>
+<h1>Login</h1>
+<p>Login</p>
 
-<h1>Log in with your Name</h1>
-
-<%= form_with scope: :login, local: true, url: login_path, method: :post do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_for(:session, url: login_path) do |f| %>  
+  <%= f.text_field :name, placeholder: 'name' %>
   <%= f.submit :submit %>
 <% end %>

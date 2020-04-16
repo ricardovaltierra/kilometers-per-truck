@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if @user = User.find_by(name: login_params[:name])
+    if @user = User.find_by(name: login_params[:name])    
       log_in(@user)
       redirect_to user_path(@user)
     else
@@ -17,9 +17,9 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end 
 
-  private
+  # private
   
   def login_params
-    params.require(:login).permit(:user)
+    params.require(:session).permit(:name)
   end
 end

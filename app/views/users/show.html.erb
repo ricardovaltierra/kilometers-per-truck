@@ -1,4 +1,10 @@
 <% provide(:page, @user.name) %>
-<h1>Users#show</h1>
 
 <%= @user.name %>
+
+<ul>
+  <li><a href="#">Travels</a></li>
+  <li><a href="#">Extra-official</a></li>
+  <li><a href="#">Citys</a></li>  
+  <li><%= link_to 'Log out', logout_path, method: :delete %></li>  
+</ul>
