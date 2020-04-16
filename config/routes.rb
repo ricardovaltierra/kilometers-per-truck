@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'travels/index'
+  get 'travels/new'
+  get 'travels/create'
+  get 'travels/show'
   root 'static_pages#home'
 
   get     'login',  to: 'sessions#new'
