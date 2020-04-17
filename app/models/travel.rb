@@ -4,7 +4,7 @@ class Travel < ApplicationRecord
   validates :name, presence: true, length: { maximum: 20 }
   validates :kilometers, presence: true
 
-  def Travel.get_all_travels
-    self.all.order(created_at: :desc)
+  def Travel.get_all_travels(current_user)
+    self.all.where(user_id: current_user).order(created_at: :desc)
   end
 end

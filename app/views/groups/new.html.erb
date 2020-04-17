@@ -1,6 +1,7 @@
 <% provide :page, "New City" %>
+<%= link_to "<-", :back %>
 
-<h1>Register new travel</h1>
+<h1>Register new City</h1>
 
 <%= form_with model: @group, local: true do |f| %>
   <%= f.label :name %>

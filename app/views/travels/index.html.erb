@@ -1,6 +1,7 @@
 <% provide :page, "All Travels" %>
+<%= link_to "<-", :back %>
 
-<h2>All Travels</h2>
+<h2>My Travels</h2>
 <ul>
   <% @travels.each do |travel| %>
     <li>ID: <%= travel.id %></li>
@@ -10,6 +11,8 @@
     <br>
   <% end %>
 </ul>
+
+<%= link_to "New Travel", new_travel_path %>
 
 
 
