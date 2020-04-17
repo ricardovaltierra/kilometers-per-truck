@@ -93,5 +93,5 @@ Views:
 - Create new City / Add new Travel
 	* Form_with fields
 	* Follow same styling
-- Extra feature: user optional Profile Photo
+- Extra feature: User optional Profile Photo
 ---------------------------------------------------------------
