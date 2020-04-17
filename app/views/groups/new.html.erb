@@ -1,2 +1,13 @@
-<h1>Groups#new</h1>
-<p>Find me in app/views/groups/new.html.erb</p>
+<% provide :page, "New City" %>
+
+<h1>Register new travel</h1>
+
+<%= form_with model: @group, local: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :icon %>
+  <%= f.text_field :icon %>
+
+  <%= f.submit :submit %>
+<% end %>

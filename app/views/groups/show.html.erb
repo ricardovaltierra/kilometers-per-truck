@@ -1,2 +1,6 @@
-<h1>Groups#show</h1>
-<p>Find me in app/views/groups/show.html.erb</p>
+<% provide :page, @group.name %>
+
+<p>ID: <%= @group.id %></p>
+<p>Group name: <%= @group.name %></p>
+<p>Icon: <%= @group.icon %></p>
+<p>Author: <%= link_to(@group.author.name, user_path(@group.author)) %></p>

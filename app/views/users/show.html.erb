@@ -1,10 +1,20 @@
-<% provide(:page, @user.name) %>
+<h1>Trucking</h1>
 
-<%= @user.name %>
+<% if logged_in? %>
+
+<h2><%= link_to("#{current_user.name}", user_path(current_user)) %></h2>
 
 <ul>
-  <li><a href="#">Travels</a></li>
+  <li><%= link_to "All Travels", travels_path %></li>
+  <li><%= link_to "My Travels", travels_path %></li>
+  <li><%= link_to "Create Travel", new_travel_path %></li>
   <li><a href="#">Extra-official</a></li>
-  <li><a href="#">Citys</a></li>  
+  <li><%= link_to "All Citys", groups_path %></li>
+  <li><%= link_to "My Citys", groups_path %></li>
+  <li><%= link_to "Create City", new_group_path %></li>  
   <li><%= link_to 'Log out', logout_path, method: :delete %></li>  
 </ul>
+
+<% else %>
+<h2><%= link_to 'Log in please', login_path %></h2>  
+<% end %>
