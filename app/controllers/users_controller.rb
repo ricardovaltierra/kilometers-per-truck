@@ -1,5 +1,4 @@
-class UsersController < ApplicationController  
-
+class UsersController < ApplicationController
   def new
     @user = User.new
   end
@@ -11,8 +10,8 @@ class UsersController < ApplicationController
       log_in(@user)
       flash[:success] = "Welcome #{@user.name}!"
       redirect_to @user
-    rescue StandardError => e
-      flash.now[:warning] = "Something wrong happened. Please try again."
+    rescue StandardError
+      flash.now[:warning] = 'Something wrong happened. Please try again.'
       render new_user_path
     end
   end

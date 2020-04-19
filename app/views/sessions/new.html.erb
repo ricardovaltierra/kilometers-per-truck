@@ -2,9 +2,8 @@
 
 <%= link_to "<-", root_path %>
 <h1>Login</h1>
-<p>Login</p>
 
 <%= form_for(:session, url: login_path) do |f| %>  
-  <%= f.text_field :name, placeholder: 'name' %>
+  <%= f.text_field :name, placeholder: 'name', autofocus: true %>
   <%= f.submit :submit %>
 <% end %>

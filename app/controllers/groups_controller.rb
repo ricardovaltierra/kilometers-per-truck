@@ -10,10 +10,10 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
-      flash[:success] = "Group created successfully."
+      flash[:success] = 'Group created successfully.'
       redirect_to group_path(@group)
     else
-      flash.now[:warning] = "Something went wrong. Please try again."
+      flash.now[:warning] = 'Something went wrong. Please try again.'
       render new_group_path
     end
   end
@@ -22,14 +22,11 @@ class GroupsController < ApplicationController
     @group = Group.find_by(id: params[:id])
   end
 
-  def edit
-  end
+  def edit; end
 
-  def update
-  end
+  def update; end
 
-  def destroy
-  end
+  def destroy; end
 
   private
 

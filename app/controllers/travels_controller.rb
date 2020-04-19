@@ -5,15 +5,16 @@ class TravelsController < ApplicationController
 
   def new
     @travel = current_user.travels.build
+    @groups = Group.all
   end
 
   def create
     @travel = current_user.travels.build(travel_params)
     if @travel.save
-      flash[:success] = "Travel created successfully."
+      flash[:success] = 'Travel created successfully.'
       redirect_to travel_path(@travel)
     else
-      flash.now[:warning] = "Something went wrong. Please try again."
+      flash.now[:warning] = 'Something went wrong. Please try again.'
       render new_travel_path
     end
   end

@@ -10,5 +10,9 @@
   <%= f.label :kilometers %>
   <%= f.text_field :kilometers %>
 
+  <%= f.label :City %>  
+  <% options = options_from_collection_for_select(@groups, 'id', 'name') %>
+  <%= f.select :all_val,  options %>
+
   <%= f.submit :submit %>
 <% end %>
