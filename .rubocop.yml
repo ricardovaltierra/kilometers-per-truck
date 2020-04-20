@@ -1,3 +1,4 @@
+
 AllCops:
   Exclude:
     - "db/**/*"
@@ -48,3 +49,13 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
+ Lint/RaiseException: false
+
+ Lint/StructNewOverride: false
+
+ Style/HashEachMethods: false
+
+ Style/HashTransformKeys: false
+ 
+ Style/HashTransformValues: false
