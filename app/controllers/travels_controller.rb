@@ -1,6 +1,6 @@
 class TravelsController < ApplicationController
   def index
-    @travels = Travel.get_all_usertravel_travels(current_user)
+    @travels = Travel.get_all_unofficial_travels(current_user)
   end
 
   def new
