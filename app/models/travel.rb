@@ -9,7 +9,6 @@ class Travel < ApplicationRecord
   end
 
   def self.get_all_official_travels(current_user)
-    all.where(user_id: current_user && group_id != nil).order(created_at: :desc)
+    all.where(user_id: current_user && !group_id.nil?).order(created_at: :desc)
   end
-  
 end

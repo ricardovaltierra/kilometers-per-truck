@@ -5,7 +5,6 @@ class TravelsController < ApplicationController
 
   def new
     @travel = current_user.travels.build
-    @groups ||= Group.all
   end
 
   def create
