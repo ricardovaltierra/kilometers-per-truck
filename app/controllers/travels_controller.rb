@@ -1,11 +1,11 @@
 class TravelsController < ApplicationController
   def index
-    @travels = Travel.get_all_travels(current_user)
+    @travels = Travel.get_all_usertravel_travels(current_user)
   end
 
   def new
     @travel = current_user.travels.build
-    @groups = Group.all
+    @groups ||= Group.all
   end
 
   def create
@@ -26,6 +26,6 @@ class TravelsController < ApplicationController
   private
 
   def travel_params
-    params.require(:travel).permit(:name, :kilometers)
+    params.require(:travel).permit(:name, :kilometers, :group_id)
   end
 end

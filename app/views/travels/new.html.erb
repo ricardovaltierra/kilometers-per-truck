@@ -1,18 +1,20 @@
 <% provide :page, "New Travel" %>
 <%= link_to "<-", :back %>
 
+<h1><%= current_user.name %></h1>
+
 <h1>Register new travel</h1>
 
 <%= form_with model: @travel, local: true do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <br>
+  <br><br>
   <%= f.label :kilometers %>
-  <%= f.text_field :kilometers %>
-
-  <%= f.label :City %>  
-  <% options = options_from_collection_for_select(@groups, 'id', 'name') %>
-  <%= f.select :all_val,  options %>
+  <%= f.text_field :kilometers %>  
+  <br><br>
+  <%= f.label :city %>  
+  <%= f.collection_select :group_id, Group.all, :id, :name, :prompt => true %>
 
   <%= f.submit :submit %>
 <% end %>
+

@@ -1,6 +1,8 @@
 <% provide :page, @travel.name %>
 <%= link_to "Menú", user_path(current_user) %>
 
+<h1><%= current_user.name %></h1>
+
 <p>ID: <%= @travel.id %></p>
 <p>Travel name: <%= @travel.name %></p>
 <p>Kilometers: <%= @travel.kilometers %></p>

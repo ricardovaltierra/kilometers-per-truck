@@ -1,6 +1,8 @@
 <% provide :page, "All Citys" %>
 <%= link_to "<-", :back %>
 
+<h1><%= current_user.name %></h1>
+
 <h2>All Citys</h2>
 <ul>
   <% @groups.each do |group| %>

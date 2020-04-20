@@ -14,4 +14,10 @@
     <%= render 'layouts/flash' %>
     <%= yield %>
   </body>
+
+  <script>
+    document.getElementById('unofficial').onchange = function() {
+        document.getElementById('all_val').disabled = !this.checked;
+    };
+  </script>
 </html>

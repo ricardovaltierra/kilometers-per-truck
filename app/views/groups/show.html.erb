@@ -1,4 +1,7 @@
 <% provide :page, @group.name %>
+<%= link_to "Menú", user_path(current_user) %>
+
+<h1><%= current_user.name %></h1>
 
 <p>ID: <%= @group.id %></p>
 <p>Group name: <%= @group.name %></p>

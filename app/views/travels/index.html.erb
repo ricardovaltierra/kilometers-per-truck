@@ -1,6 +1,8 @@
 <% provide :page, "All Travels" %>
 <%= link_to "<-", :back %>
 
+<h1><%= current_user.name %></h1>
+
 <h2>My Travels</h2>
 <ul>
   <% @travels.each do |travel| %>
