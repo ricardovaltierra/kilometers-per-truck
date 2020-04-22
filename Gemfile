@@ -23,6 +23,9 @@ gem 'uglifier', '>= 1.3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Bulma CSS
+gem 'bulma-rails', '~> 0.8.0'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

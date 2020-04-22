@@ -1,10 +1,9 @@
 <ul>
   <% flash.each do |type, msg| %>
     <% if msg.include? 'You are not registered.' %>
-    <li><%= msg %> <%= link_to 'here.', new_user_path %></li>
+    <p class="errors"><%= msg %> <%= link_to 'here.', new_user_path %></p>
     <% else %>
-    <li><%= msg %></li>
-    <% end %>
-    
+    <p class="errors"><%= msg %></p>
+    <% end %>    
   <% end %>
 </ul>

@@ -1,8 +1,13 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-@font-face {font-family: "BillabongW00-Regular"; 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Trucking</title>
+</head>
+<style>
+    
+  @font-face {font-family: "BillabongW00-Regular"; 
   src: url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.eot"); 
   src: url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.eot?#iefix") 
   format("embedded-opentype"), 
@@ -17,8 +22,7 @@
     height: 100px;
     margin: 0;
     padding: 0 auto;
-    // background: #f1f3f2;
-    background-color: black;    
+    background: #f1f1f1;
   }
   .wrapper{
     position: absolute; 
@@ -31,8 +35,7 @@
     justify-content: center;
     grid-template-columns: 90%;
     grid-template-rows: 90% 10% 10%;             
-    // background: #f1f3f2;
-    background: yellow;
+    background: #f1f1f1;
   }
 
   #btn-signup{
@@ -41,22 +44,32 @@
   }
   #btn-login{      
     background: #3979c3; /* Blue */
-    color: #f1f3f2;
   }
-  a {
+  input[type="submit"] {
     margin: 1px;
     display: block;
     width: 100%;
     height: 100%;
-    margin: 20px 0;    
+    margin: 20px 0;      
+    color: white;
     border: 0;
-    // padding: 20px;
-    font-size: 3rem;
+    padding: 20px;
+    font-size: 1.2rem;
   }
   .logo {
     margin: auto;
-    // background: yellow;
+    /* background: yellow; */
     font-family: 'BillabongW00-Regular', 'Pacifico', sans-serif;    
-    font-size: 180px;
+    font-size: 4rem;
     color: black;
   }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="logo">Trucking</div>
+  <div><input type="submit" value="LOG IN"  id="btn-login" /></div>
+  <div><input type="submit" value="SIGN UP" id="btn-signup" /></div>    
+</div>
+</body>
+</html>
