@@ -1,10 +1,21 @@
-<%= link_to "<-", root_path %>
 <% provide :page, 'Sign up' %>
 
-<h1>Sign up</h1>
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to root_path, title: "back" do %>
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>REGISTER</h1></div>
+    <div class="hd-button"><h2></h2></div>
+  </div>
+</header>
 
 <%= form_with model: @user, local: true do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, autofocus: true %>
-  <%= f.submit :submit %>
+  <div class="login-form">
+  <%= f.text_field :name %>    
+  <%= f.label :name, 'Name', class: 'placeh-label' %>
+  <%= f.submit :submit, value: 'Next', class: 'hd-button'%>
+  </div>
 <% end %>
