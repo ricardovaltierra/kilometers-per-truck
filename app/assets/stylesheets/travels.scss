@@ -1,3 +1,33 @@
 // Place all the styles related to the travels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container{
+  width: 320px;
+  height: 580px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  top: 50px;
+}
+
+.layer{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.layer-1{
+  height: 100%;
+}
+
+.layer-2{
+  transition-delay: .3s;
+  background: #ccc;
+  top: 60px;
+  padding: 30px;
+}
+
+.material-icons{
+  padding: 15px
+}

@@ -1,9 +1,21 @@
 <% provide :page, "Login" %>
 
-<%= link_to "<-", root_path %>
-<h1>Login</h1>
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to root_path, title: "back" do %>
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>LOGIN</h1></div>
+    <div class="hd-button"><h2></h2></div>
+  </div>
+</header>
 
-<%= form_for(:session, url: login_path) do |f| %>  
-  <%= f.text_field :name, placeholder: 'name', autofocus: true %>
-  <%= f.submit :submit %>
+<%= form_for(:session, url: login_path) do |f| %>
+  <div class="login-form">    
+    <%= f.text_field :name %>    
+    <%= f.label :name, 'Name', class: 'placeh-label' %>    
+    <%= f.submit :submit, value: 'Log in', class: 'hd-button'%>
+  </div>
 <% end %>

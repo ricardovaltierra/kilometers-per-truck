@@ -12,8 +12,6 @@
   format("truetype"), url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.svg#BillabongW00-Regular") 
   format("svg"); }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
   html,
   body {
     height: 100px;
@@ -30,8 +28,7 @@
     justify-items: stretch;
     align-items: end;
     align-content: space-around;
-    justify-content: center;
-    grid-template-columns: 90%;
+    justify-content: center;    
     grid-template-rows: 77% 10% 10%;
     background: #f1f3f2;    
   }
@@ -51,7 +48,6 @@
     margin: 10px 0;    
     border: 0;
     padding: 45px 0;
-    font-family: 'Roboto', sans-serif;
     font-size: 3.8em;
     text-align: center;
     text-decoration: none;    

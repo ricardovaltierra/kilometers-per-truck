@@ -4,15 +4,15 @@
     <title><%= full_title(yield(:page)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/70310fb349.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://kit.fontawesome.com/70310fb349.js", crossorigin: "anonymous" %>
   </head>
 
-  <body>
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/flash' %>
+  <body>    
     <%= yield %>
+    <%= render 'layouts/flash' %>
   </body>
 
   <!-- <script>
