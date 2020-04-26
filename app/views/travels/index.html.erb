@@ -1,9 +1,17 @@
 <% provide :page, "All Travels" %>
-<%= link_to "<-", user_path(current_user) %>
 
-<h1><%= current_user.name %></h1>
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to user_path(current_user), title: "back" do %>      
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>My Travels</h1></div>
+    <div class="hd-button"><i class="fas fa-search fa-2x"></i></div>
+  </div>
+</header>
 
-<h2>My Travels</h2>
 <ul>
   <% @travels.each do |travel| %>
     <li>ID: <%= travel.id %></li>
@@ -14,7 +22,8 @@
   <% end %>
 </ul>
 
+<div class="new-button">
 <%= link_to "New Travel", new_travel_path %>
-
+</div>
 
 

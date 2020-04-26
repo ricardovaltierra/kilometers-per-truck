@@ -1,20 +1,33 @@
+<!-- ------------------------------------------- -->
 <% provide :page, "New Travel" %>
-<%= link_to "<-", :back %>
 
-<h1><%= current_user.name %></h1>
-
-<h1>Register new travel</h1>
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to :back, title: "back" do %>      
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>New Travel</h1></div>
+    <div class="hd-button"><h2></h2></div>
+  </div>
+</header>
+<!-- --------------------------------- -->
 
 <%= form_with model: @travel, local: true do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br><br>
-  <%= f.label :kilometers %>
-  <%= f.text_field :kilometers %>  
-  <br><br>
-  <%= f.label :city %>  
-  <%= f.collection_select :group_id, Group.all, :id, :name, :prompt => true %>
-
-  <%= f.submit :submit %>
+  <div class="travel-form">
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :kilometers %>
+      <%= f.text_field :kilometers %>  
+    </div>
+    <div class="tv-select-group">       
+      <%= f.collection_select :group_id, Group.all, :id, :name, {include_blank: 'Select a city'}, class: 'tv-select' %>
+    </div>    
+    <%= f.submit :submit, value: 'Next', class: 'hd-button'%>
+  </div>
 <% end %>
 
