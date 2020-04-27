@@ -1,6 +1,10 @@
 
  .trust-blue-gradient {
+  position: relative;
+  z-index: 99;
+  width: 100%;
   height: 180px;
+  top: 0;  
   background: -webkit-linear-gradient(0deg, #2e65a6 30%, #3b77c0 60%); 
   /* FF3.6+ */ 
   background: linear-gradient(0deg, #2e65a6 30%, #3b77c0 60%); 

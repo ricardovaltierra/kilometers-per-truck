@@ -1,6 +1,11 @@
 class TravelsController < ApplicationController
   def index
-    @travels = Travel.get_all_unofficial_travels(current_user)
+    # @travels = Travel.get_all_unofficial_travels(current_user)
+    # For creating views for My travels and unofficial travles
+    # one must pass here the current user and the propper scope
+    # to create a conditional but redirect to the same pae
+    # index
+    @travels = Travel.all
   end
 
   def new
@@ -10,8 +15,8 @@ class TravelsController < ApplicationController
   def create
     @travel = current_user.travels.build(travel_params)
     if @travel.save
-      flash[:success] = 'Travel created successfully.'
-      redirect_to travel_path(@travel)
+      flash[:success] = 'Travel created successfully!'
+      redirect_to travels_path
     else
       flash.now[:warning] = 'Something went wrong. Please try again.'
       render new_travel_path

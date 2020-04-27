@@ -13,10 +13,10 @@
   left: 0;
   right: 0;
   display: block;
-  margin: 20px 0;
+  margin: 0;
   background: #54b31b;
   color: white;
-  border: 0;  
+  border: 0;
   padding: 20px;
   
   
@@ -28,4 +28,13 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
   }
+}
+
+.alert {
+  font-size: 2.3em;
+  padding: 20px;
+  background-color: #54b31b; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  padding-left: 54px;    
 }

@@ -12,14 +12,28 @@
   </div>
 </header>
 
+<div class="total-amount">
+  <span>Made Kilometers</span>
+  <h2><strong><%= total_kilometers %> km</strong></h2>
+</div>
+
+  <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <% end %>
+
 <div class="list-container">
   <ul class="scroller">
     <% @travels.each do |travel| %>
-      <li>ID: <%= travel.id %></li>
-      <li>Travel name: <%= travel.name %></li>
-      <li>Kilometers for this travel: <%= travel.kilometers %>.</li>
-      <li>Author: <%= link_to(travel.author.name, user_path(travel.author)) %></li>
-      <br>
+    <div class="travel-item">
+      <div class="id-container">
+        <li>Id: <%= travel.id %></li>
+      </div>
+      <div class="description">
+        <li><div class="name"><%= travel.name %></div></li>
+        <li><div class="kilometers">Kilometers for this travel: <%= travel.kilometers %>.</div></li>
+        <li><div class="author">Author: <%= travel.author.name %></div></li>
+      </div>      
+    </div>
     <% end %>
   </ul>
 </div>
