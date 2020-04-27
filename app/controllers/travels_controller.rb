@@ -1,7 +1,7 @@
 class TravelsController < ApplicationController
   def index
     # @travels = Travel.get_all_unofficial_travels(current_user)
-    # For creating views for My travels and unofficial travles
+    # For creating views for My travels and unofficial travel s
     # one must pass here the current user and the propper scope
     # to create a conditional but redirect to the same pae
     # index

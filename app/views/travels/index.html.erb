@@ -17,9 +17,7 @@
   <h2><strong><%= total_kilometers %> km</strong></h2>
 </div>
 
-  <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-  <% end %>
+<%= render 'layouts/flash' %>
 
 <div class="list-container">
   <ul class="scroller">
