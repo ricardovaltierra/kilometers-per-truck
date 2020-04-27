@@ -23,7 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'capistrano-rails', group: :development
 
 # Bulma CSS
-#gem 'bulma-rails', '~> 0.8.0'
+# gem 'bulma-rails', '~> 0.8.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -53,8 +53,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'fog', '1.42'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

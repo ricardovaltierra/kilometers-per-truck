@@ -3,7 +3,7 @@ class Travel < ApplicationRecord
   belongs_to :groups, required: false
   validates :name, presence: true, length: { maximum: 20 }
   validates :kilometers, presence: true
-  
+
   default_scope -> { order(created_at: :desc) }
 
   def self.get_all_unofficial_travels(current_user)

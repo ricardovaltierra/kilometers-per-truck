@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     begin
       @user.save
-      log_in(@user)      
+      log_in(@user)
       redirect_to @user
     rescue StandardError
       flash.now[:warning] = 'Something wrong happened. Please try again.'
