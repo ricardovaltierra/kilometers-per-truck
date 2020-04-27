@@ -1,9 +1,3 @@
-<ul>
-  <% flash.each do |type, msg| %>
-    <% if msg.include? 'You are not registered.' %>
-    <p class="errors"><%= msg %> <%= link_to 'here.', new_user_path %></p>
-    <% else %>
-    <p class="errors"><%= msg %></p>
-    <% end %>    
-  <% end %>
-</ul>
+<% flash.each do |message_type, message| %>
+  <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>  
+<% end %>

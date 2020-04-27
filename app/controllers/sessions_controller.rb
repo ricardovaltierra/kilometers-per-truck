@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       log_in(@user)
       redirect_to user_path(@user)
     else
-      flash.now[:warning] = 'You are not registered. Please do it'
+      flash.now[:warning] = 'You are not registered. Please go back to sign up'
       render 'sessions/new'
     end
   end

@@ -33,10 +33,18 @@
 .alert {
   font-size: 2.3em;
   padding: 20px;
-  background-color: #54b31b; /* Red */
   color: white;
   margin-bottom: 15px;
   padding-left: 54px;    
+}
+
+.alert-success {
+  background-color: #54b31b; /* Red */
+}
+
+.alert-warning {
+  margin-top: 40px;
+  background-color: #f56257; /* Red */
 }
 
 // -------------- Form (travel, city)
