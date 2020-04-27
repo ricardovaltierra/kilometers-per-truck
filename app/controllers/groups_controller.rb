@@ -10,8 +10,8 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
-      flash[:success] = 'Group created successfully.'
-      redirect_to group_path(@group)
+      flash[:success] = 'City added successfully!'
+      redirect_to groups_path
     else
       flash.now[:warning] = 'Something went wrong. Please try again.'
       render new_group_path
