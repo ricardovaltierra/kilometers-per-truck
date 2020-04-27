@@ -41,6 +41,10 @@ That's it on configuration. Now you can just open your terminal to start on `rai
 Now you can navigate to `localhost:3000` on your browser to see your app working.
 Feel free to create as many travels as required. If you want to record an official travel you will have to go first to register a city if there is no one.
 
+## Business Rules
+
+ [You can find original business rules here](../kilometers-per-truck/Bussiness-Rules.txt)
+
 ## 🤝 Contributing
 
 Contributions are more than welcome!<br/>Feel free to check [issues page](https://github.com/ricardovaltierra/private-events/issues).
