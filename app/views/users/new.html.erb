@@ -13,7 +13,7 @@
 </header>
 
 <%= form_with model: @user, local: true do |f| %>
-  <div class="travel-form">
+  <div class="user-form">
     <%= f.text_field :name %>    
     <%= f.label :name, 'Name', class: 'placeh-label' %>
     <%= f.submit :submit, value: 'Next', class: 'hd-button'%>

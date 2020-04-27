@@ -13,7 +13,7 @@
 </header>
 
 <%= form_for(:session, url: login_path) do |f| %>
-  <div class="login-form">
+  <div class="user-form">
     <%= f.text_field :name %>    
     <%= f.label :name, 'Name', class: 'placeh-label' %>    
     <%= f.submit :submit, value: 'Log in', class: 'hd-button'%>

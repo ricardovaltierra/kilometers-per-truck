@@ -1,9 +1,18 @@
+<!-- ------------------------------------------------>
 <% provide :page, "All Citys" %>
-<%= link_to "<-", :back %>
 
-<h1><%= current_user.name %></h1>
-
-<h2>All Citys</h2>
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to user_path(current_user), title: "back" do %>      
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>Citys</h1></div>
+    <div class="hd-button"><i class="fas fa-search fa-2x"></i></div>
+  </div>
+</header>
+<!-- ------------------------------------------------------>
 <ul>
   <% @groups.each do |group| %>
     <li>ID: <%= group.id %></li>
@@ -13,5 +22,6 @@
     <br>
   <% end %>
 </ul>
-
+<div class="new-button">
 <%= link_to "Create City", new_group_path %>
+</div>  

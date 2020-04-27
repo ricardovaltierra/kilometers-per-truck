@@ -12,15 +12,17 @@
   </div>
 </header>
 
-<ul>
-  <% @travels.each do |travel| %>
-    <li>ID: <%= travel.id %></li>
-    <li>Travel name: <%= travel.name %></li>
-    <li>Kilometers for this travel: <%= travel.kilometers %>.</li>
-    <li>Author: <%= link_to(travel.author.name, user_path(travel.author)) %></li>
-    <br>
-  <% end %>
-</ul>
+<div class="list-container">
+  <ul class="scroller">
+    <% @travels.each do |travel| %>
+      <li>ID: <%= travel.id %></li>
+      <li>Travel name: <%= travel.name %></li>
+      <li>Kilometers for this travel: <%= travel.kilometers %>.</li>
+      <li>Author: <%= link_to(travel.author.name, user_path(travel.author)) %></li>
+      <br>
+    <% end %>
+  </ul>
+</div>
 
 <div class="new-button">
 <%= link_to "New Travel", new_travel_path %>
