@@ -43,7 +43,7 @@ Feel free to create as many travels as required. If you want to record an offici
 
 ## Business Rules
 
- [You can find original business rules here](../kilometers-per-truck/Bussiness-Rules.txt)
+ [You can find original business rules here](Bussiness-Rules.txt)
 
 ## 🤝 Contributing
 
