@@ -7,6 +7,11 @@
   height: 100%;
 }
 
+.login-msg {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
 .new-button {
   position: fixed;
   bottom: 0;
@@ -30,10 +35,10 @@
   }
 }
 
-.alert {
+.alert { 
   font-size: 2.3em;
   padding: 20px;
-  color: white;
+  color: white;  
   margin-bottom: 15px;
   padding-left: 54px;    
 }
@@ -43,7 +48,7 @@
 }
 
 .alert-warning {
-  margin-top: 40px;
+  margin-top: 180px;
   background-color: #f56257; /* Red */
 }
 
