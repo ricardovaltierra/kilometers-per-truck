@@ -6,11 +6,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     begin
-      @user.save
-      log_in(@user)
-      redirect_to @user
+      if @user.save
+        log_in(@user)
+        redirect_to @user
+      else
+        flash.now[:warning] = "#{@user.errors.full_messages.to_sentence}."        
+        render new_user_path
+      end
     rescue StandardError
-      flash.now[:warning] = 'Something wrong happened. Please try again.'
+      flash.now[:warning] = "The name is already taken. Please choose a different one."
       render new_user_path
     end
   end
