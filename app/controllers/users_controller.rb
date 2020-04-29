@@ -10,11 +10,11 @@ class UsersController < ApplicationController
         log_in(@user)
         redirect_to @user
       else
-        flash.now[:warning] = "#{@user.errors.full_messages.to_sentence}."        
+        flash.now[:warning] = "#{@user.errors.full_messages.to_sentence}."
         render new_user_path
       end
     rescue StandardError
-      flash.now[:warning] = "The name is already taken. Please choose a different one."
+      flash.now[:warning] = 'The name is already taken. Please choose a different one.'
       render new_user_path
     end
   end

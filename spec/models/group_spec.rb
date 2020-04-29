@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  let(:test_user) { User.create(name: "user_example") }
+  let(:test_user) { User.create(name: 'user_example') }
   let(subject) do
     described_class.new(
-      name: 'NYC'
-      icon: 'nyc.jpg'
+      name: 'NYC',
+      icon: 'nyc.jpg',
       user_id: test_user.id
     )
   end
