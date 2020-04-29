@@ -10,8 +10,9 @@
 
   <div class="user-menu">
     <ul>  
-      <li><i class="fas fa-cog fa-3x"></i><%= link_to "My Travels", travels_path %></li>  
-      <li><i class="fas fa-map-marker-alt fa-3x"></i><a href="#">Unofficial travels</a></li>
+      <!-- <li><i class="fas fa-cog fa-3x"></i><%= link_to "My Travels", travels_path %></li> -->
+      <li><i class="fas fa-cog fa-3x"></i><%= link_to "My Travels", travels_path(:travel => { :official => 'true' }) %></li>
+      <li><i class="fas fa-map-marker-alt fa-3x"></i><%= link_to "Unofficial Travels", travels_path(:travel => { :official => 'false' }) %></li>
       <li><i class="fas fa-gift fa-3x"></i><%= link_to "Citys", groups_path %></li>    
       <li><i class="fas fa-external-link-alt fa-3x"></i><%= link_to 'Log out', logout_path, method: :delete, class: "logout-user" %></li>  
     </ul>

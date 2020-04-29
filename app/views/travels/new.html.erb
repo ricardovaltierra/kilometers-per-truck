@@ -22,9 +22,11 @@
       <%= f.label :kilometers %>
       <%= f.text_field :kilometers %>  
     </div>
-    <div class="tv-select-group">       
-      <%= f.collection_select :group_id, Group.all, :id, :name, {include_blank: 'Select a city'}, class: 'tv-select' %>
-    </div>    
+    <% if session[:official] == 'true' %>
+      <div class="tv-select-group">       
+        <%= f.collection_select :group_id, Group.all, :id, :name, {include_blank: 'Select a city'}, class: 'tv-select' %>
+      </div>
+    <% end %>
     <%= f.submit :submit, value: 'Next', class: 'hd-button'%>
   </div>
 <% end %>
