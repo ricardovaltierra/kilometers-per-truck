@@ -1,6 +1,6 @@
 class Travel < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'user_id'
-  belongs_to :groups, required: false
+  belongs_to :group, required: false
   validates :name, presence: true, length: { maximum: 20 }
   validates :kilometers, presence: true
 

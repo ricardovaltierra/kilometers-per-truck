@@ -29,7 +29,7 @@
       <div class="description">
         <li><div class="name"><%= travel.name %></div></li>
         <li><div class="kilometers">Kilometers for this travel: <%= travel.kilometers %>.</div></li>
-        <li><div class="author">Author: <%= travel.author.name %></div></li>
+        <li><div class="author"><%= travel_city(travel) %></div></li>
       </div>      
     </div>
     <% end %>
