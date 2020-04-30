@@ -7,7 +7,7 @@ class Travel < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
 
   def self.get_all_unofficial(current_user)
-    all_mine(current_user).where(group_id: nil)    
+    all_mine(current_user).where(group_id: nil)
   end
 
   def self.get_all_official(current_user)
