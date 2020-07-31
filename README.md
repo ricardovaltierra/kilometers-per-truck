@@ -66,13 +66,13 @@ Clone or fork the <a href="https://github.com/ricardovaltierra/kilometers-per-tr
 
 As a user once you registered are able to do the following:
 
-- Register multiple travels you've made (Per service)
-  * Specify the package to deliver
-  * The kilometers traveled
-  * The destiny (City) if it's an official travel
-- See all the travels you've made in your profile
-  * View the official & unofficial travels separately (Unofficial does not have a destiny)
-- View available cities for destiny and register a new one if required
+- Register multiple travels you've made (Per service).
+  * Specify the package to deliver.
+  * The kilometers traveled.
+  * The destiny (City) if it's an official travel.
+- See all the travels you've made in your profile.
+  * View the official & unofficial travels separately (Unofficial does not have a destiny).
+- View available cities for destiny and register a new one if required.
 
 ## How it Works
 
@@ -95,21 +95,21 @@ Feel free to create as many travels as required. If you want to record an offici
 
 ## Business Rules
 
- [You can find original business rules here](Bussiness-Rules.txt)
+ [You can find original business rules here](Bussiness-Rules.txt).
     
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
+1. Fork the Project.
 
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
 
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
 
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
 
-5. Open a Pull Request
+5. Open a Pull Request.
 
 ## Contact
 
