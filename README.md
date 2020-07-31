@@ -42,7 +42,7 @@ It is designed to cover the need to measure how many kilometers do each of the r
 
 ![Login and register](app/assets/images/login-register.gif) ![Login and register](app/assets/images/app-tour-1.gif) ![Login and register](app/assets/images/app-tour-2.gif)
 
-> [Live Version!](https://truckinglat.herokuapp.com/)
+> [Live Version](https://truckinglat.herokuapp.com/)
 
 Feel free to use and recommend it.
 
