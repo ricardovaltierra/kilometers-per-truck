@@ -1,4 +1,4 @@
-# (Truking)Kilometers-per-truck
+# Trucking
 
 > Microverse ROR Capstone Project
 
