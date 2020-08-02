@@ -1,0 +1,97 @@
+--------------------------------------------------------------
+
+Project: Kilometers per truck
+
+The company needs to measure how many kilometers do each of its trucks register for every service they do to a given city and for every extra kilometers not destined to work (go to lunch - fuel load - truck service - others)
+
+Bussiness rules:
+
+- A truck (driver) will have multiple services to different cities (must specify the package to deliver)
+- One service may be delivered by more than one truck (driver) with transship
+- A city will be visited by multiple drivers (through each service)
+- The driver for this release (beta) will be in charge if required to register a new city
+
+DB model:
+
+User (Driver)
+Fields:
+
+- user_id							-> int 			not null
+- name								-> string 	not null
+- timestamps					-> datetime not null
+
+Travel (Kilometers per service)
+Fields:
+
+- travel_id						-> int 			not null
+- author_id (user FK)	-> int 			not null
+- name					      -> string 	not null
+- kilometers		      -> int		not null
+- timestamps					-> datetime not null
+
+Group (City)
+Field:
+
+- group_id						-> int 			not null
+- author_id (user FK)	-> int 			not null
+- name                -> string   not null
+- icon      					-> string		not null
+- timestamps					-> datetime not null
+
+
+Relationships:
+
+- One User has_many Travel's (1,*)
+- One User has_many Group's (cities) registered (1,*)
+
+- One Travel belongs_to one Author (User) (1,1)
+- One Travel belongs_to One Group (city, destiny) (1,1)
+
+- One Group (city) belongs_to one Author (User) (1,1)
+- One Group (city) has_many Travel's made by many User's (1,*)
+
+* Constraints:
+
+- One Group (City) CAN NOT BELONGS to more than one Author (User)
+	* Although, one Group will be visited by many Users through Travels
+- One Travel CAN NOT BELONGS to more than one Group (City)
+
+* Permissive
+
+- A User can have no Travels
+- A User can have no Groups (cities) registered
+
+- A Travel can have no Group (City) but MUST have an Author
+- A Group can have no Travels but MUST have an Author
+
+---------------------------------------------------------------
+
+Views:
+
+- Profile's page
+	* My travels
+	* Unofficial travels
+	* Citys
+- My travels
+	* Total kilometers sum (on top)
+	* List of all travels made by user (sorted desc by date)
+	* Each transaction display its name, kilometers, creation_date and icon of the city traveled
+	* Button to add new travel
+- Unofficial travels
+	* List of all travels made by user (sorted desc by date) but not group (city) assigned
+	* Page similar to My travels
+- Citys
+	* List of all Citys in alphabetical order
+	* Each City displays Icon, name and creation date
+	* Each City is clickable and opens "City Travels's page"
+	* Button for Create new City
+	* Page design similar to user's profile
+- City Travels
+	* List of all travels that belong to that group (city)
+	* Desgn similar to "My travels" view 
+	* Each Travel displays author's name
+- Create new City / Add new Travel
+	* Form_with fields
+	* Follow same styling
+- Extra feature: User optional Profile Photo
+---------------------------------------------------------------

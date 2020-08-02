@@ -1,0 +1,43 @@
+<% provide :page, "All Travels" %>
+
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to user_path(current_user), title: "back" do %>      
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>My Travels</h1></div>
+    <div class="hd-button"><i class="fas fa-search fa-2x"></i></div>
+  </div>
+</header>
+
+<div class="total-amount">
+  <span>Made Kilometers</span>
+  <h2><strong><%= total_kilometers %> km</strong></h2>
+</div>
+
+<%= render 'layouts/flash' %>
+
+<div class="list-container">
+  <ul class="scroller">
+    <% @travels.each do |travel| %>
+    <div class="travel-item">
+      <div class="id-container">
+        <li>Id: <%= travel.id %></li>
+      </div>
+      <div class="description">
+        <li><div class="name"><%= travel.name %></div></li>
+        <li><div class="kilometers">Kilometers for this travel: <%= travel.kilometers %>.</div></li>
+        <li><div class="author"><%= travel_city(travel) %></div></li>
+      </div>      
+    </div>
+    <% end %>
+  </ul>
+</div>
+
+<div class="new-button">
+<%= link_to "New Travel", new_travel_path %>
+</div>
+
+

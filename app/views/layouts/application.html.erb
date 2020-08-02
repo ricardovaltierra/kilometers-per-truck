@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KilometersPerTruck</title>
+    <title><%= full_title(yield(:page)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/70310fb349.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://kit.fontawesome.com/70310fb349.js", crossorigin: "anonymous" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body>    
+    <%= yield %>    
   </body>
+
+  <!-- <script>
+    document.getElementById('unofficial').onchange = function() {
+        document.getElementById('all_val').disabled = !this.checked;
+    };
+  </script> -->
 </html>

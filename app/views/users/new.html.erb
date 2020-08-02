@@ -1,0 +1,23 @@
+<% provide :page, 'Sign up' %>
+
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to root_path, title: "back" do %>
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>REGISTER</h1></div>
+    <div class="hd-button"><h2></h2></div>
+  </div>
+</header>
+
+<%= form_with model: @user, local: true do |f| %>
+  <div class="user-form">
+    <%= f.text_field :name %>    
+    <%= f.label :name, 'Name', class: 'placeh-label' %>
+    <%= f.submit :submit, value: 'Next', class: 'hd-button'%>
+  </div>
+<% end %>
+
+<%= render 'layouts/flash' %>

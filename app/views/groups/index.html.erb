@@ -1,0 +1,39 @@
+<% provide :page, "All Citys" %>
+
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to user_path(current_user), title: "back" do %>      
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>Citys</h1></div>
+    <div class="hd-button"><i class="fas fa-search fa-2x"></i></div>
+  </div>
+</header>
+
+<%= render 'layouts/flash' %>
+
+<div class="list-container">
+  <ul class="scroller">
+    <% @groups.each do |group| %>
+      <div class="city-item">
+        <div class="photo-container">
+          <li><div class="photo"><%= group.icon %></div></li>
+        </div>
+        <div class="description">
+          <li><div class="name"><%= group.name %></div></li>
+          <li><div class="id">Id: <%= group.id %></div></li>          
+        </div>
+        <!-- <li><div class="author">Author: <%= link_to(group.author.name, user_path(group.author)) %></div></li> -->
+        <div class="author-container">
+          <li><div class="author"><%= group.author.name %></div></li>
+        </div>
+      </div>
+    <% end %>
+  </ul>
+</div>
+
+<div class="new-button">
+  <%= link_to "Create City", new_group_path %>
+</div>

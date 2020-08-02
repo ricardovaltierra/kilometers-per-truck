@@ -1,0 +1,59 @@
+
+ .trust-blue-gradient {
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  height: 180px;
+  top: 0;  
+  background: -webkit-linear-gradient(0deg, #2e65a6 30%, #3b77c0 60%); 
+  /* FF3.6+ */ 
+  background: linear-gradient(0deg, #2e65a6 30%, #3b77c0 60%); 
+  /* W3C */ }
+
+.hd-container {
+  position: relative; 
+  display: grid;
+  width: 100%;
+  height: 100%;    
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 90%;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: space-around;  
+}
+
+.hd-container>div {  
+  position: relative;
+  display: grid;
+  align-content: end;
+  padding-bottom: 30px;
+  color: white;
+  text-decoration: none;  
+}
+
+.hd-back {
+  display: block;
+  padding-left: 30px;
+  justify-content: start;
+}
+
+.hd-back>a {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 20%;
+  font-size: 5em;  
+  color: #FFFFFF;
+}  
+
+.hd-title {
+  font-size: 3em;
+  justify-content: center;
+}
+
+.hd-button {
+  font-size: 2em;
+  padding-right: 30px;
+  justify-content: end;
+  color: white;
+}

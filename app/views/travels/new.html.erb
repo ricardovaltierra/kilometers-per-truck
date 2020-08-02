@@ -1,0 +1,35 @@
+<% provide :page, "New Travel" %>
+
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to :back, title: "back" do %>      
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>New Travel</h1></div>
+    <div class="hd-button"><h2></h2></div>
+  </div>
+</header>
+
+<%= form_with model: @travel, local: true do |f| %>
+  <div class="mob-form">
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :kilometers %>
+      <%= f.text_field :kilometers %>  
+    </div>
+    <% if session[:official] == 'true' %>
+      <div class="tv-select-group">       
+        <%= f.collection_select :group_id, Group.all, :id, :name, {include_blank: 'Select a city'}, class: 'tv-select' %>
+      </div>
+    <% end %>
+    <%= f.submit :submit, value: 'Next', class: 'hd-button'%>
+  </div>
+<% end %>
+
+<%= render 'layouts/flash' %>
+

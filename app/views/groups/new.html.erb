@@ -1,0 +1,27 @@
+<% provide :page, "New City" %>
+
+<header class="trust-blue-gradient">
+  <div class="hd-container">
+    <div class="hd-back">
+      <%= link_to :back, title: "back" do %>      
+        <i class="fas fa-arrow-left fa-xs"></i>
+      <% end %>
+    </div>     
+    <div class="hd-title"><h1>New City</h1></div>
+    <div class="hd-button"><h2></h2></div>
+  </div>
+</header>
+
+<%= form_with model: @group, local: true do |f| %>
+  <div class="mob-form">
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :icon %>
+      <%= f.text_field :icon %>
+    </div>    
+    <%= f.submit :submit, value: 'Next', class: 'hd-button'%>
+  </div>
+<% end %>
