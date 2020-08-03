@@ -10,30 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_200_420_034_127) do
-  create_table 'groups', force: :cascade do |t|
-    t.string 'name'
-    t.string 'icon'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'user_id'
-    t.index ['user_id'], name: 'index_groups_on_user_id'
+ActiveRecord::Schema.define(version: 2020_04_20_034127) do
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
-  create_table 'travels', force: :cascade do |t|
-    t.string 'name'
-    t.integer 'kilometers'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'user_id'
-    t.integer 'group_id'
-    t.index ['user_id'], name: 'index_travels_on_user_id'
+  create_table "travels", force: :cascade do |t|
+    t.string "name"
+    t.integer "kilometers"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "group_id"
+    t.index ["user_id"], name: "index_travels_on_user_id"
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'name'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['name'], name: 'index_users_on_name', unique: true
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_users_on_name", unique: true
   end
+
 end
