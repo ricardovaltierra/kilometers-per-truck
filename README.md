@@ -36,8 +36,7 @@
 
 Small app with a thematic of delivering enterprise services to keep the record on their vehicle kilometer travels.
 
-It is designed to cover the need to measure how many kilometers do each of the registered trucks on every service they do, to a given city and for every extra unworked kilometers (lunch - fuel load - mechanic service - others).
-
+It is designed to cover the need to measure how many kilometers do each of the registered trucks do per service, to a given city, and for every extra unworked travel (lunch - fuel load - mechanic service - others).
 ## Preview
 
 <img src="app/assets/images/login-register.gif" data-canonical-src="app/assets/images/login-register.gif" width="180"/>  <img src="app/assets/images/app-tour-1.gif" data-canonical-src="app/assets/images/app-tour-1.gif" width="180"/>  <img src="app/assets/images/app-tour-2.gif" data-canonical-src="app/assets/images/app-tour-2.gif" width="180"/>
